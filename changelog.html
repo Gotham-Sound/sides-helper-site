@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sides Helper Changelog</title><meta name="description" content="What changed in each build of Sides Helper, the sides tool and the read-along for the sound cart, on iPad and Mac."><style>
+:root { color-scheme: light; }
+body { margin: 0; background: #f7f6f2; color: #1c1c1c; font: 17px/1.55 -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; }
+main { max-width: 720px; margin: 0 auto; padding: 40px 20px 64px; }
+header img { width: 220px; height: auto; display: block; margin-bottom: 28px; }
+h1 { font-size: 30px; margin: 0 0 6px; letter-spacing: -0.01em; }
+h2 { font-size: 20px; margin: 34px 0 8px; padding-top: 8px; border-top: 1px solid #dad9d2; }
+p { margin: 0 0 14px; }
+ul { padding-left: 24px; margin: 0 0 14px; }
+li { margin-bottom: 8px; }
+a { color: #4a5a00; }
+footer { margin-top: 48px; color: #5c5c5c; font-size: 15px; border-top: 1px solid #dad9d2; padding-top: 16px; }
+</style></head>
+<body><main>
+<header><img src="gothamsound.png" alt="Gotham Sound"></header>
+<h1>Sides Helper Changelog</h1>
+<p>One entry per build that reached testers, newest first. The build number is in Settings on both platforms and in the Mac disk image's Read me first. The same page is on the site at https://gotham-sound.github.io/sides-helper-site/changelog.html.</p>
+<h2>Build 110, 2026-09-22</h2>
+<ul>
+<li>Follow always turns off. Before, a tap on Follow was ignored while the speech model was still loading after a turn-on, which on an iPad's first run is a minute; the button now says "loading the speech model" during that time and a tap turns Follow off at any moment.</li>
+<li>On the Mac, Open PDF, Add another PDF and Cmd-O use the Mac's own Open panel. Before, after Close packet, Open PDF could show no window at all.</li>
+<li>A tester log: every report, user error included, is written down with what it pointed to and what changed.</li>
+</ul>
+<h2>Build 107, 2026-09-22</h2>
+<ul>
+<li>Settings has a User manual link that opens the manual in the browser. The manual itself is at https://gotham-sound.github.io/sides-helper-site/manual.html, current for both platforms with fresh screens.</li>
+</ul>
+<h2>Build 104, 2026-09-22</h2>
+<ul>
+<li>The Follow unlock reads $49.99 everywhere, matching the price on the App Store sheet.</li>
+<li>The build number shows in Settings, About and the diagnostic report; the Mac read-me says it too.</li>
+<li>A PDF opened again replaces its copy in the packet instead of being added twice. Notes re-attach and the cursor stays.</li>
+<li>A slow line is given its own time: once enough of a line has been heard, that line's own pace sets how long the rest is expected to take when it says the line runs slower than average, so the next name lights later on a slow line rather than early.</li>
+</ul>
+<h2>Build 100, 2026-09-21</h2>
+<ul>
+<li>The audio input on the Mac is captured through an audio unit pinned to the device you pick. Before, picking any device whose sample rate differed from the Mac's default input captured nothing, silently, and a stereo device beside a mono default gave channel 1 only. Devices are remembered by a stable identifier, so a pick survives re-plugging and a reboot.</li>
+<li>Only an input you picked in Feed + STT check is remembered. With nothing picked, a recorder over USB is used when one is plugged in, otherwise the built-in mic, and that guess is never written down as your choice. A pick that is unplugged when Follow turns on is named in an alert; another feed stands in if one is there, the built-in mic never does.</li>
+<li>Sum in the channel picker is channels 1 and 2 only. Before, it averaged every channel the device offered.</li>
+<li>The text under the macOS microphone prompt says the input you pick, USB feed included, is what is used.</li>
+</ul>
+<h2>Build 97, 2026-09-21</h2>
+<ul>
+<li>The first open after the app had sat idle for a few seconds no longer hangs on the Mac: the sides engine's web view lives in the window, where macOS does not suspend it.</li>
+<li>An open that stalls says so with a message after a set time instead of spinning forever, and the diagnostic report carries the engine's own log.</li>
+<li>Settings, and with it Send a report, are reachable before any sides are open: on the first screen, and on the Mac under the app menu.</li>
+</ul>
+<h2>Build 91, 2026-09-21</h2>
+<ul>
+<li>The first TestFlight build. The sides tool, the KEY, Follow with the Page, Drum, Horizon and Picture displays, notes and flags, Print / Export, the sample sides, Open a sides link, Send a report.</li>
+</ul>
+<footer>Gotham Sound and Communications, Inc., New York. <a href="index.html">Sides Helper</a> · <a href="manual.html">Manual</a> · <a href="changelog.html">Changelog</a> · <a href="privacy.html">Privacy</a> · <a href="support.html">Support</a> · <a href="mailto:support@gothamsound.com">support@gothamsound.com</a></footer>
+</main></body></html>
