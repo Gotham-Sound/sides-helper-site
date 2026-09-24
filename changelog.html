@@ -17,6 +17,12 @@ footer { margin-top: 48px; color: #5c5c5c; font-size: 15px; border-top: 1px soli
 <header><img src="gothamsound.png" alt="Gotham Sound"></header>
 <h1>Sides Helper Changelog</h1>
 <p>One entry per build that reached testers, newest first. The build number is in Settings on both platforms and in the Mac disk image's Read me first. The same page is on the site at https://gotham-sound.github.io/sides-helper-site/changelog.html.</p>
+<h2>Build 152, 2026-09-24 (Mac)</h2>
+<ul>
+<li>Cmd-W is Close packet: it closes the sides and the window stays, on the empty screen with Open PDF. Close Window is Cmd-Shift-W. Before, Cmd-W was macOS's own Close Window, and the app kept running with nothing on screen: the File menu still worked, the Open panel still came up, and the PDF you picked opened into a window that was not there. That is the File &gt; Open that "did nothing" on one tester's Mac since build 110, found from his video. Every menu item that shows something now brings the window back first, and so does a click on the Dock icon, so a closed window is never a dead end.</li>
+<li>Two doors fewer, both platforms in the next iPad build: Close packet is gone from the bottom of the Roster and KEY sheet (it is in the ⋯ menu, and on the Mac in the File menu), and the Display link is gone from Settings (Display is the sliders button on the page; with no sides open there is nothing for it to show). Feed + STT check and Send a report stay in Settings.</li>
+<li>The first image signed by Gotham Sound and Communications, Inc.: the Developer ID and the notarization are the company's now. Nothing else changed since 139.</li>
+</ul>
 <h2>Build 142, 2026-09-24 (iPad)</h2>
 <ul>
 <li>The first build from Gotham Sound and Communications' own developer account. It arrives through a new TestFlight invitation; the old one keeps working until it is retired. Settings on the iPad start fresh once, the same way the Mac's did, because the app carries Gotham's identifier now. Nothing else changed since 139.</li>
