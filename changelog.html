@@ -17,6 +17,14 @@ footer { margin-top: 48px; color: #5c5c5c; font-size: 15px; border-top: 1px soli
 <header><img src="gothamsound.png" alt="Gotham Sound"></header>
 <h1>Sides Helper Changelog</h1>
 <p>One entry per build that reached testers, newest first. The build number is in Settings on both platforms and in the Mac disk image's Read me first. The same page is on the site at https://gotham-sound.github.io/sides-helper-site/changelog.html.</p>
+<h2>Build 181, 2026-09-26 (iPad and Mac)</h2>
+<ul>
+<li>A call sheet or a coverage grid in front of the sides is left alone as a whole page: nothing on it enlarges or lands in the character list, and the Print / Export screen names the page it left out.</li>
+<li>Forget everything turns Follow off before it clears the device, and the Settings text says what it removes. The trial clock stays.</li>
+<li>Check the feed has no speech model picker any more. The app runs the model it ships with and never downloads one; the Speech section keeps the window and the counters.</li>
+<li>On the iPad, the unlock price appears once the App Store has answered, in your own currency. If Apple refunds the unlock, Follow locks again; a moment without the App Store never locks it. On the Mac, the license screen says once per person, and Open license file looks for .sideshelper-license files.</li>
+<li>Under the hood: audio buffers reach the listener in the order they arrived, on every input, and the app is built with Swift 6's concurrency checking on, so the compiler now checks every handoff between the audio thread, the speech engine and the page. Old report folders are cleared from the temporary folder a day after Mail took them.</li>
+</ul>
 <h2>Build 174, 2026-09-25 (iPad and Mac)</h2>
 <ul>
 <li>Display is shorter: ten of our own switches are gone and their values are set the way the app already ran. What is left is yours: theme, layout, script, names, text size, the Follow display, Ahead of the ears, page movement, follow position, after you scroll, Stay in the scene, how many names the rail shows, note size and the Pencil.</li>
