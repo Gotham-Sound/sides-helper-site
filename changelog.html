@@ -17,6 +17,14 @@ footer { margin-top: 48px; color: #5c5c5c; font-size: 15px; border-top: 1px soli
 <header><img src="gothamsound.png" alt="Gotham Sound"></header>
 <h1>Sides Helper Changelog</h1>
 <p>One entry per build that reached testers, newest first. The build number is in Settings on both platforms and in the Mac disk image's Read me first. The same page is on the site at https://gotham-sound.github.io/sides-helper-site/changelog.html.</p>
+<h2>Build 191, 2026-09-27 (iPad and Mac)</h2>
+<ul>
+<li>The Mac app runs inside Apple's app sandbox now, the way a Mac app is expected to: it can reach the files you open or drop on it, the audio input and the printer, and nothing else on the Mac. The first launch after this update starts without sides or KEY memory: open the sides again and set the KEY once. Settings and a pasted license key carry over.</li>
+<li>The input and channel are picked in Settings, under Feed, on both platforms. Check the feed names the pick and keeps the gain, the meter and Listen.</li>
+<li>On the Mac, a double-click on a line opens a note there. A right-click still does too, and the first click seats as before.</li>
+<li>On the Mac, Help &gt; User manual opens the manual in your browser. The Help menu no longer says help is not available.</li>
+<li>Send a report no longer picks up the last crash log from the Mac's diagnostics folder. If the app crashes, Console's report is the one to send.</li>
+</ul>
 <h2>Build 183, 2026-09-26 (iPad and Mac)</h2>
 <ul>
 <li>Follow crashed the app the moment the feed started in 181, on both platforms: a check the compiler now runs on the audio thread. Fixed, and a test guards it. 181 is withdrawn. Nothing else changed since 181.</li>
